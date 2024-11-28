@@ -204,7 +204,7 @@ button:hover, .home-btn:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 420px) {
   form {
     padding: 15px;
     font-size: 18px;
