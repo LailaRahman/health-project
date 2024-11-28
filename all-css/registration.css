@@ -62,14 +62,14 @@ input {
   margin-top: 20px;
 }
 
-#gender p {
+#gender p u{
   font-size: 1.1rem;
-  margin-bottom: 10px;
 }
 
 /* Hide the default radio buttons */
 #gender input[type="radio"] {
   display: none;
+  margin-bottom: 15px;
 }
 
 /* Custom radio button styling */
@@ -206,7 +206,7 @@ button:hover, .home-btn:hover {
 @media screen and (max-width: 480px) {
   form {
     padding: 15px;
-    font-size: 24px;
+    font-size: 18px;
   }
 
   header h1 {
@@ -218,16 +218,11 @@ button:hover, .home-btn:hover {
   }
 
   input {
-    font-size: 1rem;
-  }
-
-  .button-container {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons */
+    font-size: .8rem;
   }
 
   button, .home-btn {
-    width: 90%; /* Make buttons take up most of the width on smaller screens */
+    width: 50%; /* Make buttons take up most of the width on smaller screens */
     margin-top: 10px; /* Adjust margin for spacing */
   }
 }
