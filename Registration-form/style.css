@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(15, 40, 80);
+  color: white;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+form {
+  font-size: 18px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgb(166, 163, 163, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+header hr {
+  border: 1px solid white;
+  margin: 15px auto;
+}
+
+.parents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Style for Gender Section */
+#gender {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#gender p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Hide the default radio buttons */
+#gender input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button styling */
+#gender label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#gender .custom-radio {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(5, 31, 73);
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 2px solid rgba(199, 204, 212, 0.5);
+}
+
+#gender input[type="radio"]:checked + .custom-radio {
+  background-color: rgb(199, 204, 212);
+  color: rgb(5, 31, 73);
+  transform: translateY(-2px);
+  border: 2px solid rgb(5, 31, 73);
+}
+
+#gender label:hover .custom-radio {
+  background-color: rgba(199, 204, 212, 0.8);
+  color: rgb(5, 31, 73);
+}
+
+/* Style for Checkbox Section */
+#checkbox {
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+/* Hide default checkbox */
+#checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Custom checkbox appearance */
+#checkbox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Custom checkbox box */
+#checkbox .custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Custom checkbox box before element */
+#checkbox .custom-checkbox::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(199, 204, 212, 0.5);
+  border-radius: 5px;
+  background-color: rgb(5, 31, 73);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Checked state for custom checkbox */
+#checkbox input[type="checkbox"]:checked + .custom-checkbox::before {
+  background-color: rgb(199, 204, 212);
+  border-color: rgb(5, 31, 73);
+  content: '✔';
+  color: rgb(5, 31, 73);
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Hover state for custom checkbox */
+#checkbox label:hover .custom-checkbox::before {
+  border-color: rgba(199, 204, 212, 0.8);
+}
+
+/* General button styling */
+button, .home-btn {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(5, 31, 73);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 48%; /* Ensure they fit side by side */
+  text-align: center; /* Center text in the buttons */
+}
+.button-container a{
+  text-decoration: none;
+}
+
+/* Hover effects */
+button:hover, .home-btn:hover {
+  background-color: rgb(199, 204, 212);
+  color: rgb(5, 31, 73);
+  transform: translateY(-2px);
+}
+
+/* Home button specific hover effect */
+.home-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Button container styling to make them appear side by side */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between buttons */
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    padding: 15px;
+    font-size: 24px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .parents {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+  }
+
+  button, .home-btn {
+    width: 90%; /* Make buttons take up most of the width on smaller screens */
+    margin-top: 10px; /* Adjust margin for spacing */
+  }
+}
+
+/* Styles for the custom alert modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#alert-title,
+#alert-message {
+  margin: 0;
+  padding: 0;
+  color: black; /* Ensure text is visible */
+  font-size: 18px;
+}
+
+.modal-content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background-color: #2e455d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-content button:hover {
+  background-color: #ccc;
+}

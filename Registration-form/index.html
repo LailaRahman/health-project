@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="registration-form">
+      <header>
+        <h1>Registration Form</h1>
+        <hr />
+      </header>
+
+      <main>
+        <div class="parents">
+          <div class="child" id="name">
+            Name:<br />
+            <input type="text" id="name-input" placeholder="Name" required />
+          </div>
+          <div class="child" id="lastName">
+            Last Name:<br />
+            <input
+              type="text"
+              id="lastName-input"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="child" id="email">
+            Email:<br />
+            <input
+              type="email"
+              id="email-input"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <div class="child" id="number">
+            Number:<br />
+            <input
+              type="text"
+              id="number-input"
+              placeholder="Contact Number"
+              required
+            />
+          </div>
+          <div class="child" id="password">
+            Password:<br />
+            <input
+              type="text"
+              id="password-input"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="child" id="confirm">
+            Confirm Password:<br />
+            <input
+              type="text"
+              id="confirm-password-input"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+        </div>
+
+        <div id="gender">
+          <p><u>Gender</u></p>
+          <label>
+            <input type="radio" value="Male" required />
+            <span class="custom-radio">Male</span>
+          </label>
+          <label>
+            <input type="radio" value="Female" required />
+            <span class="custom-radio">Female</span>
+          </label>
+          <label>
+            <input type="radio" value="Other" required />
+            <span class="custom-radio">Other</span>
+          </label>
+        </div>
+
+        <div id="checkbox">
+          <label>
+            <input type="checkbox" id="terms-checkbox" required />
+            <span class="custom-checkbox"
+              >I promise that I will update this registration form</span
+            >
+          </label>
+        </div>
+
+        <div class="button-container">
+          <button type="submit">Submit</button>
+          <a href="../main-folder/main.html" class="home-btn">Back to Home</a>
+        </div>
+      </main>
+    </form>
+
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert" class="modal">
+      <div class="modal-content">
+        <h2 id="alert-title"></h2>
+        <p id="alert-message"></p>
+        <button type="button" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("registration-form");
+        const passwordInput = document.getElementById("password-input");
+        const confirmPasswordInput = document.getElementById(
+          "confirm-password-input"
+        );
+        const modal = document.getElementById("custom-alert");
+        const alertTitle = document.getElementById("alert-title");
+        const alertMessage = document.getElementById("alert-message");
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault(); // Prevent page refresh
+          let isValid = true;
+
+          // Check if passwords match
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            showCustomAlert("Error", "Passwords do not match!");
+            return;
+          }
+
+          // Check if all required fields are filled
+          const requiredFields = form.querySelectorAll("input[required]");
+          requiredFields.forEach((field) => {
+            if (!field.value.trim()) {
+              isValid = false;
+            }
+          });
+
+          if (!isValid) {
+            showCustomAlert(
+              "Error",
+              "Your form is incomplete. Please fill out all required fields."
+            );
+          } else {
+            showCustomAlert(
+              "Success",
+              "You have successfully submitted your form!"
+            );
+          }
+        });
+
+        function showCustomAlert(title, message) {
+          alertTitle.textContent = title;
+          alertMessage.textContent = message;
+          modal.style.display = "flex";
+        }
+
+        // Attach closeModal globally
+        window.closeModal = function () {
+          modal.style.display = "none";
+        };
+      });
+    </script>
+  </body>
+</html>
