@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(15, 40, 80);
+  background-color: #34495e;
   color: white;
   font-family: 'Arial Narrow', Arial, sans-serif;
   display: flex;
@@ -15,13 +15,14 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  overflow: hidden;
 }
 
 form {
   font-size: 18px;
   width: 100%;
   max-width: 500px;
-  background-color: rgb(166, 163, 163, 0.4);
+  background-color: rgba(239, 236, 236, 0.057);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -84,7 +85,7 @@ input {
   padding: 5px 15px;
   font-size: 1rem;
   color: white;
-  background-color: rgb(5, 31, 73);
+  background-color: #34495e;
   border-radius: 20px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border: 2px solid rgba(199, 204, 212, 0.5);
@@ -142,7 +143,7 @@ input {
   height: 20px;
   border: 2px solid rgba(199, 204, 212, 0.5);
   border-radius: 5px;
-  background-color: rgb(5, 31, 73);
+  background-color: #314459;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -170,7 +171,7 @@ button, .home-btn {
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  background-color: rgb(5, 31, 73);
+  background-color: #314459;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
