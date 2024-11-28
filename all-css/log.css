@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(15, 40, 80);;
+  background-color: #314459;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@ h2 {
 
 .login-btn {
   padding: 12px;
-  background-color: rgb(15, 40, 80);
+  background-color: #314459;
   color: #fff;
   border: none;
   border-radius: 4px;
