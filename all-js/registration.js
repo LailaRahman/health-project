@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Track gender selection
   genderInputs.forEach((input) => {
     input.addEventListener("change", (event) => {
-      selectedGender = event.target.value; // Update the selected gender
-      console.log("Selected Gender:", selectedGender); // Log the selected gender
+      selectedGender = event.target.value; 
+      console.log("Selected Gender:", selectedGender); 
     });
   });
 
   // Form submission handler
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent page refresh
+    event.preventDefault();
     let isValid = true;
 
     // Check if passwords match
