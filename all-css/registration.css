@@ -159,7 +159,6 @@ input {
   line-height: 20px;
 }
 
-/* Hover state for custom checkbox */
 #checkbox label:hover .custom-checkbox::before {
   border-color: rgba(199, 204, 212, 0.8);
 }
@@ -177,26 +176,20 @@ button, .home-btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 48%; /* Ensure they fit side by side */
-  text-align: center; /* Center text in the buttons */
+  width: 48%; 
+  text-align: center;
 }
 .button-container a{
   text-decoration: none;
 }
-
-/* Hover effects */
 button:hover, .home-btn:hover {
   background-color: rgb(199, 204, 212);
   color: rgb(5, 31, 73);
   transform: translateY(-2px);
 }
-
-/* Home button specific hover effect */
 .home-btn:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
 }
-
-/* Button container styling to make them appear side by side */
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -223,11 +216,10 @@ button:hover, .home-btn:hover {
   }
 
   button, .home-btn {
-    width: 50%; /* Make buttons take up most of the width on smaller screens */
-    margin-top: 10px; /* Adjust margin for spacing */
+    width: 50%; 
+    margin-top: 10px; 
   }
 }
-
 /* Styles for the custom alert modal */
 .modal {
   display: none;
@@ -255,7 +247,7 @@ button:hover, .home-btn:hover {
 #alert-message {
   margin: 0;
   padding: 0;
-  color: black; /* Ensure text is visible */
+  color: black; 
   font-size: 18px;
 }
 
